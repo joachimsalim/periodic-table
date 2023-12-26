@@ -2,15 +2,19 @@ import React from 'react';
 
 interface ChemicalElementProps {
   /**
-   * What element does this symbol abbreviate?
+   * What is the name of this element?
    */
-  chemicalSymbol: string;
+  name: string,
   /**
-   * What is this element's atomic weight?
+   * What is the symbol of this element?
    */
-  atomicWeight: number;
+  symbol: string;
   /**
-   * What is the background color of the grouping this element belongs to?
+   * What is the atomic number of this element?
+   */
+  atomicNumber: number;
+  /**
+   * What is the chemical group block of this element?
    */
   backgroundColor: string;
   /**
@@ -25,8 +29,9 @@ interface ChemicalElementProps {
 
 
 export const ChemicalElement = ({
-  chemicalSymbol = 'O',
-  atomicWeight = 8,
+  name = 'Oxygen',
+  symbol = 'O',
+  atomicNumber = 8,
   backgroundColor,
   ...props 
 }: ChemicalElementProps) => {
@@ -37,7 +42,7 @@ export const ChemicalElement = ({
       style={{ backgroundColor }}
       {...props}  
     >
-      {chemicalSymbol + atomicWeight}
+      {symbol + ' ' + atomicNumber + ' - ' + name}
     </button>
   );
 };
