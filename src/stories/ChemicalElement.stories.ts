@@ -19,18 +19,18 @@ type Story = StoryObj<typeof meta>;
 
 export const Passive: Story = {
   args: {
+    active: false,
     name: 'Oxygen',
     symbol: 'O',
     atomicNumber: 8,
-    backgroundColor: 'white',
   },
 };
 
 export const Active: Story = {
   args: {
+    active: true,
     name: 'Oxygen',
     symbol: 'O',
     atomicNumber: 8,
-    backgroundColor: 'cyan',
   }
 };
