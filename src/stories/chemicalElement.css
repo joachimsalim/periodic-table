@@ -3,25 +3,25 @@
   width: 100px;
   height: 100px;
   border: solid;
+  background-color: white;
+  opacity: 1;
+  transition: 0.3s;
 
   #atomic-number {
     font-size: 0.8rem;
     text-indent: 0.25em;
   }
-
   #symbol {
     font-size: 1.2rem;
     text-align: center;
   }
-
   #name {
     font-size: 0.8rem;
     text-align: center;
   }
 }
-.storybook-chemical-element--passive {
-  background-color: white;
-}
-.storybook-chemical-element--active {
+.storybook-chemical-element:hover {
   background-color: cyan;
+  opacity: 1;
+  transition: 0.6s;
 }
