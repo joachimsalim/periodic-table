@@ -3,10 +3,6 @@ import './chemicalElement.css';
 
 interface ChemicalElementProps {
   /**
-   * Is this the default state of this component?
-   */
-  active?: boolean;
-  /**
    * What is the name of this element?
    */
   name?: string;
@@ -23,28 +19,21 @@ interface ChemicalElementProps {
    */
   backgroundColor?: string;
   /**
-   * Optional hover handler
-   */
-  onHover?: () => void;
-  /**
    * Optional click handler
    */
   onClick?: () => void;
 }
 
-
 export const ChemicalElement = ({
-  active = false,
   name = 'Oxygen',
   symbol = 'O',
   atomicNumber = 8,
   backgroundColor,
   ...props 
 }: ChemicalElementProps) => {
-  const mode = active ? 'storybook-chemical-element--active' : 'storybook-chemical-element--passive';
   return (
     <div
-      className={["storybook-chemical-element", mode].join(' ')}
+      className="storybook-chemical-element"
       style={{ backgroundColor }}
       {...props}  
     >

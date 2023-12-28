@@ -17,20 +17,10 @@ const meta = {
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Passive: Story = {
+export const Primary: Story = {
   args: {
-    active: false,
     name: 'Oxygen',
     symbol: 'O',
     atomicNumber: 8,
   },
-};
-
-export const Active: Story = {
-  args: {
-    active: true,
-    name: 'Oxygen',
-    symbol: 'O',
-    atomicNumber: 8,
-  }
 };
