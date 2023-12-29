@@ -15,3 +15,4 @@ Run the following command to start the Storybook workshop of the components used
 ```
 npm run storybook
 ```
+![storybook.png](/public/storybook.png)
