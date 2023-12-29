@@ -10,7 +10,7 @@ const meta = {
   },
   tags: ['autodocs'],
   argTypes: {
-    backgroundColor: { controls: 'color' },
+    backgroundColor: { control: 'color' },
   },
 } satisfies Meta<typeof ChemicalElement>;
 
