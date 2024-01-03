@@ -10,6 +10,12 @@ npm i
 ```
 
 ### Usage
+##### React
+Run the following command to start this React app:
+```
+npm run dev
+```
+![dev.png](/public/dev.png)
 ##### Storybook
 Run the following command to start the Storybook workshop of the components used to build this app:
 ```
