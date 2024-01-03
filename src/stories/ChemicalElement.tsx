@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './chemicalElement.css';
 
 interface ChemicalElementProps {
@@ -28,14 +28,36 @@ export const ChemicalElement = ({
   name = 'Oxygen',
   symbol = 'O',
   atomicNumber = 8,
-  backgroundColor,
+  backgroundColor = 'lightskyblue',
   ...props 
 }: ChemicalElementProps) => {
+  const passive = {
+    'background-color': 'white',
+    opacity: 1,
+    transition: '0.3',
+  };
+  const active = {
+    'background-color': backgroundColor,
+    opacity: 1,
+    transition: '0.6s',
+  };
+
+  const [hover, setHover] = useState(false);
+
   return (
     <div
       className="storybook-chemical-element"
-      style={{ backgroundColor }}
-      {...props}  
+      onMouseEnter={() => {
+        setHover(true);
+      }}
+      onMouseLeave={() => {
+        setHover(false);
+      }}
+      style={{
+        ...passive,
+        ...hover ? active : null
+      }}
+      {...props}
     >
       <div id="atomic-number">{atomicNumber}</div>
       <p id="symbol">{symbol}</p>
