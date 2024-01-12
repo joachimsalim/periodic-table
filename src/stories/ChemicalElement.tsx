@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import './chemicalElement.css';
 
 interface ChemicalElementProps {
@@ -31,6 +31,8 @@ export const ChemicalElement = ({
   backgroundColor = 'lightskyblue',
   ...props 
 }: ChemicalElementProps) => {
+  const [hover, setHover] = useState(false);
+
   const passive = {
     'background-color': 'white',
     opacity: 1,
@@ -41,8 +43,6 @@ export const ChemicalElement = ({
     opacity: 1,
     transition: '0.6s',
   };
-
-  const [hover, setHover] = useState(false);
 
   return (
     <div
