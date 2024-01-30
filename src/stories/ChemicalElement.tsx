@@ -36,7 +36,7 @@ export const ChemicalElement = ({
   const passive = {
     'background-color': 'white',
     opacity: 1,
-    transition: '0.3',
+    transition: '0.3s',
   };
   const active = {
     'background-color': backgroundColor,
